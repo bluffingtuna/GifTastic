@@ -16,7 +16,10 @@ $(document).ready(function() {
     //This will target the class btn and when its clicked it will invoke the gifs function
     $(document).on('click', '.btn', gifs);
     //Whenever the img elements are clicked, clicks function will invoke.
-    $(document).on('click', 'img', stilloranimate);
+    $(document).on({
+        mouseenter: stilloranimate,
+        mouseleave: stilloranimate,
+    }, "img");
     // This on click method will display user input as button
     $("#add").on('click', function() {
         var name = $('#inputBox').val().trim();
